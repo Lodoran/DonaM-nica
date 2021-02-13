@@ -1,0 +1,50 @@
+
+import java.util.Scanner;
+
+public class DonaMonica {
+    public static void main(String[] args){
+        Scanner scan= new Scanner(System.in);
+        int M;
+        int A;
+        int B;
+        int C;
+        System.out.println("Digite a idade de dona Monica");
+        M = scan.nextInt();
+             System.out.println("Digite a idade de um dos filhos");
+        A = scan.nextInt();
+        System.out.println("Digite a idade de outro filho");
+        B = scan.nextInt();
+                do{        
+        if(M=<40){
+        System.out.println("A idade de dona Monica nao e valida, digite novamente:");
+                M = scan.nextInt();}else if(M=>110){
+        System.out.println("A idade de dona Monica nao e valida, digite novamente:");
+                M = scan.nextInt();}else if(A == B){ 
+        System.out.println("A idade dos dois filhos nao pode ser igual, digite novamente;");
+        System.out.println("Idade do primeiro filho: ");
+        A = scan.nextInt();
+        System.out.println("Idade do outro filho: ");
+        B = scan.nextInt();}else if(M<A){
+        System.out.println("A idade do filho e invalida;");                
+        System.out.println("Idade do primeiro filho: ");
+        A = scan.nextInt();}else if(A<=1){
+        System.out.println("A idade do filho e invalida;");                
+        System.out.println("Idade do primeiro filho: ");
+        A = scan.nextInt();}else if(M<B){
+        System.out.println("A idade do segundo filho e invalida;"); 
+        System.out.println("Idade do segundo filho: ");
+        B = scan.nextInt();}else if(B<=1){
+        System.out.println("A idade do segundo filho e invalida;"); 
+        System.out.println("Idade do segundo filho: ");
+        B = scan.nextInt();}
+        }while(( 40<=M )or (M>=110)  or (A == B) or (M<A) or (A<=1) or (M<B) or (B<=1));
+        C= M - A - B;
+        System.out.println("A idade do ultimo filho é:"+ C);
+    if((C>A) and (C>B)){
+        System.out.println("O filho do calculo é o mais velho");
+    }else if((B>A) and (B>C)){
+      System.out.println("O segundo filho é o mais velho");  
+    }else if((A>B) and (A>C)){
+    System.out.println("O primeiro filho é o mais velho");}
+}
+}
